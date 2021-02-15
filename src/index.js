@@ -2,10 +2,9 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
- matrix = matrix.flat(Infinity);
-  matrix.sort(function (a, b) {
-    return a - b
-  })
-
-  return matrix
+ for (i = 1; i < matrix.length; i+=2) {
+    matrix[i] = matrix[i].reverse();
+  }
+  matrix = matrix.flat(Infinity);
+  return matrix;
 }
